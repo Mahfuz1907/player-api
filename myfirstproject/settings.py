@@ -19,7 +19,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['player-mml-api.onrender.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['player-mml-api.onrender.com', '127.0.0.1']
 
 
 CORS_ALLOWED_ORIGINS = [

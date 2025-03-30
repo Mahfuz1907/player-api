@@ -23,7 +23,7 @@ ALLOWED_HOSTS = ['player-mml-api.onrender.com', '127.0.0.1']
 
 
 CORS_ALLOWED_ORIGINS = [
-    'https://player-mml.netlify.app/',
+    'https://player-mml.netlify.app',
 ]
 
 
@@ -34,6 +34,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

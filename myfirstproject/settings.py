@@ -8,7 +8,7 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
 
 
 
@@ -22,9 +22,11 @@ DEBUG = False
 ALLOWED_HOSTS = ['player-mml-api.onrender.com', '127.0.0.1']
 
 
-# CORS_ALLOWED_ORIGINS = [
-#     'https://player-mml.netlify.app', 
-# ]
+CORS_ALLOWED_ORIGINS = [
+    'https://player-mml.netlify.app', 
+    'http://127.0.0.1:5500',
+    'http://localhost:3000',
+]
 
 
 STATIC_URL = '/static/'
@@ -49,9 +51,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'players',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # Add this
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -61,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'myfirstproject.urls'
 

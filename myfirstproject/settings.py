@@ -17,7 +17,7 @@ CORS_ALLOW_ALL_ORIGINS = False
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['player-mml-api.onrender.com', '127.0.0.1']
 

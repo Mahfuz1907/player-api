@@ -23,7 +23,7 @@ ALLOWED_HOSTS = ['player-mml-api.onrender.com', '127.0.0.1']
 
 
 CORS_ALLOWED_ORIGINS = [
-    'https://player-mml.netlify.app', 
+    'https://mashriq-maghrib-league.netlify.app/', 
     'http://127.0.0.1:5500',
     'http://localhost:3000',
     'http://localhost:5173'
